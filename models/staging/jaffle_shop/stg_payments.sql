@@ -10,7 +10,7 @@ WITH payments as (
         amount / 100 AS amount,
         created AS created_at
     
-    FROM fundamentals.stripe_payment
+    FROM {{ source('fundamentals', 'stripe_payment') }}
 
 )
 

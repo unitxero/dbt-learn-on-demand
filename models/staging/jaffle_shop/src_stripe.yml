@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: fundamentals
+    database: homework3-330822
+    tables:
+      - name: stripe_payment
+        description: Raw payment data.
+        columns:
+          - name: id
+            description: Primary key for orders.
+            tests:
+              - unique
+              - not_null      
